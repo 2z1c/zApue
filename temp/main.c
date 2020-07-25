@@ -1,7 +1,10 @@
+#include <dirent.h>
 #include <stdio.h>
+#include "apue.h"
+
 
 int main(int argc, char *argv[])
 {
   printf("hello world\n");
-  exit(0);
+  return 0x0;
 }
