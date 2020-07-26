@@ -23,7 +23,7 @@ set(Apue_Srcs_DIR  ${zApue_root_DIR}/ApueSrc)
 # 添加编译是的路径
 # ---------------------------
 # 添加通用的头文件路径
-message(STATUS ${Lib_IncludeDistribution_DIR})
+
 include_directories(${Lib_IncludeDistribution_DIR})
 link_directories(${Lib_Distribution_DIR})
 

@@ -1,12 +1,14 @@
 #include "apue.h"
 
-#define	BUFFSIZE	4096
-
-int
-main(void)
+#define BUFFSIZE 4096
+/*
+ * Needed for logging funtions.
+ */
+int log_to_stderr = 1;
+int main(void)
 {
-	int		n;
-	char	buf[BUFFSIZE];
+	int n;
+	char buf[BUFFSIZE];
 
 	while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0)
 		if (write(STDOUT_FILENO, buf, n) != n)

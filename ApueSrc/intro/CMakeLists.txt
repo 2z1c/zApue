@@ -1,6 +1,15 @@
 PROJECT(zApueIntro) # 指定工程名称
 CMAKE_MINIMUM_REQUIRED(VERSION 3.10.2) # 指定最小的版本
-#  
-FILE(GLOB showFilename_SRCS ls1.c)
-ADD_EXECUTABLE(ls1.run ${showFilename_SRCS})
-target_link_libraries(ls1.run pthread zApue)
+
+
+
+#  ls1.c mycat.c
+Set(__Exe_Pre ls1 mycat )
+
+# 开始遍历，生成对应的可执行文件
+FOREACH(Exe_Pre ${__Exe_Pre})
+  # message(STATUS ${Exe_Pre})
+  FILE(GLOB ${Exe_Pre}_SRCS ${Exe_Pre}.c)
+  ADD_EXECUTABLE(${Exe_Pre}.run ${${Exe_Pre}_SRCS})
+  target_link_libraries(${Exe_Pre}.run pthread zApue)    
+ENDFOREACH(Exe_Pre)
