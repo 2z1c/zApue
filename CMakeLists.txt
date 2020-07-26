@@ -16,7 +16,8 @@ set(zApue_build_DIR ${zApue_root_DIR}/tmp)
 set(Lib_Distribution_DIR ${zApue_root_DIR}/lib)
 # 设置好头文件的路径
 set(Lib_IncludeDistribution_DIR  ${zApue_root_DIR}/include)
-
+# 添加外部的一些源文件路径
+set(Apue_Srcs_DIR  ${zApue_root_DIR}/ApueSrc)
 
 # ---------------------------
 # 添加编译是的路径
@@ -31,6 +32,8 @@ link_directories(${Lib_Distribution_DIR})
 # 编译时的一些其他需要修改的东西 
 # ---------------------------
 
+# 添加一些需要定义的宏
+ADD_DEFINITIONS(-DLINUX -D_GNU_SOURCE) 
 # 创建编译的临时文件
 file(MAKE_DIRECTORY ${zApue_build_DIR})
 
@@ -43,6 +46,7 @@ ADD_SUBDIRECTORY(${zApue_root_DIR}/libsrc ${zApue_build_DIR}/libsrc)
 
 # 2. 添加需要的编译的项目
 ADD_SUBDIRECTORY(${zApue_root_DIR}/temp ${zApue_build_DIR}/temp) 
+ADD_SUBDIRECTORY(${zApue_root_DIR}/ApueSrc ${zApue_build_DIR}/ApueSrc) 
 
 
 
