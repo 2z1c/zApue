@@ -13,7 +13,25 @@
 -   STDERR_FILENO 标准错误
 ```
 
-## 
+## getcputc.c
+```c
+-  EOF标志
+-  putc  & getc
+```
+
+## uidgid.c
+```c
+-   getuid  # 用户ID
+-   getgid  # 组用户ID，对用户ID的封装
+-   getpid  # 进程ID
+```
+
+## shell1.c
+```c
+-   fork  # 创建新进程，返回子进程的PID，为0表示为子进程
+-   execlp  # exec 族系列的函数
+```
+
 
 
 

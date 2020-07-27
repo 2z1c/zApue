@@ -1,9 +1,13 @@
 #include "apue.h"
 
-int
-main(void)
+/*
+ * Needed for logging funtions.
+ */
+int log_to_stderr = 1;
+
+int main(void)
 {
-	int		c;
+	int c;
 
 	while ((c = getc(stdin)) != EOF)
 		if (putc(c, stdout) == EOF)
