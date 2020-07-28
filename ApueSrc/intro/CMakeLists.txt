@@ -4,7 +4,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.10.2) # 指定最小的版本
 
 
 #  ls1.c mycat.c
-Set(__Exe_Pre ls1 mycat getcputc uidgid shell1)
+Set(__Exe_Pre ls1 mycat getcputc uidgid shell1 testerror shell2)
 
 # 开始遍历，生成对应的可执行文件
 FOREACH(Exe_Pre ${__Exe_Pre})
