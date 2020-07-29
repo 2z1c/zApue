@@ -12,6 +12,7 @@ set(lib_src_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 # 最后同步文件
 ADD_SUBDIRECTORY(test) # 添加子项目文件
 ADD_SUBDIRECTORY(Apue) # 添加子项目文件
+ADD_SUBDIRECTORY(StrByte) # 添加子项目文件
 
 
 

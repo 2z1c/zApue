@@ -2,16 +2,12 @@
 #include <stdio.h>
 #include "apue.h"
 #include "test.h"
-
+#include "StrByte.h"
 int main(int argc, char *argv[])
 {
-  printf("hello world\n");
-  zApueTestfun();
-  for (int i = 1; i <= 1; i++)
-  {
-    /* code */
-    zApueTestfun1();
-  }
-
+  char *Src = "012344";
+  char Dst[100];
+  HexToStr(Dst, Src, strlen(Src));
+  printf("%s\n", Dst);
   return 0x0;
 }
