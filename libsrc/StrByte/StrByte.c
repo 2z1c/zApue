@@ -1,5 +1,10 @@
 #include <ctype.h>
-
+/*! 
+  C语言表驱动法编程实践(精华帖,建议收藏并实践)
+    https://mp.weixin.qq.com/s/qzj9m_737nJHp_Iqs8FmNg
+  C语言常用的一些转换工具函数收集
+    https://mp.weixin.qq.com/s/EIZvr74GRASFyyixYtKArA
+*/
 void StrToHex(char *pbDest, char *pbSrc, int nLen)
 {
   char h1, h2;
