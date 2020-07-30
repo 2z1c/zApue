@@ -8,7 +8,7 @@ set(Apue_src_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 ADD_SUBDIRECTORY(intro) # 添加子项目文件
 ADD_SUBDIRECTORY(sockets) # 添加子项目文件
 ADD_SUBDIRECTORY(printer) # 添加子项目文件
-
+ADD_SUBDIRECTORY(ipc1) # 添加子项目文件
 
 
 # 最后打印数据
